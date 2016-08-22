@@ -1,0 +1,21 @@
+{
+  "name": "sample-project",
+  "main": "lib/index.js",
+  "private": true,
+  "scripts": {
+    "style": "jscs -v lib/*.js",
+    "test": "tap --cov -R=spec test/*.test.js --timeout=2",
+    "coverage": "tap --cov --coverage-report=lcov test/*.test.js",
+    "watch": "nodemon -q -x 'npm test'"
+  },
+  "devDependencies": {
+    "jscs": "^2.1.0",
+    "nodemon": "^1.4.1",
+    "tap": "^2.3.1",
+    "tap-spec": "^2.2.2",
+    "tape": "^4.2.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
