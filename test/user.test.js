@@ -2,9 +2,11 @@ var request = require('request');
 
 var app = require('../server');
 
-var test = require('tape');
+var test = require('tap').test;
 
 test('First test!', function (assert) {
+  assert.plan(1);
+
   request.get('http://localhost:3000/api/users', function(err, res) {
     let json = JSON.parse(res.body);
     assert.equal(json[0], 'John', 'name should be John');
@@ -14,6 +16,8 @@ test('First test!', function (assert) {
 });
 
 test('Second test!', function (assert) {
+  assert.plan(1);
+
   request.get('http://localhost:3000/api/users', function(err, res) {
     let json = JSON.parse(res.body);
     assert.equal(json[0], 'John', 'name should be John');
