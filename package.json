@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "style": "jscs -v lib/*.js",
-    "test": "tap --cov -R=spec test/*.test.js --timeout=2",
+    "test": "tap --cov -R=spec test/*.test.js",
     "coverage": "tap --cov --coverage-report=lcov test/*.test.js",
     "watch": "nodemon -q -x 'npm test'"
   },
   "devDependencies": {
     "jscs": "^3.0.7",
     "nodemon": "^1.10.2",
+    "supertest": "^2.0.0",
+    "t-up": "^2.0.2",
     "tap": "^6.3.2",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.0"

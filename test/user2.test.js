@@ -1,6 +1,5 @@
 var request = require('http');
 
-//var app = require('../server');
 
 var test = require('tap').test;
 
@@ -15,7 +14,7 @@ test('First test!', function (assert) {
     })
     res.on('end', () => {
       let json = JSON.parse(data);
-      assert.equal(json[0], 'John', 'name should be John');
+      assert.equal(json[1], 'Joe', 'name should be Joe');
       //assert.equal(json[1], 'Joe', 'name should be Joe');
       assert.end();
     })
@@ -33,8 +32,8 @@ test('Second test!', function (assert) {
     })
     res.on('end', () => {
       let json = JSON.parse(data);
-      assert.equal(json[0], 'John', 'name should be John');
-      //assert.equal(json[1], 'Joe', 'name should be Joe');
+      assert.equal(json[1], 'Joe', 'name should be Joe');
+      assert.equal(json[2], 'Moe', 'name should be Moe');
       assert.end();
     })
   });
